@@ -10,7 +10,7 @@ class App extends Component {
           <div className="App">
               <Navbar dark color="info">
               <div className="container">
-                  <NavbarBrand href="/">Sweet Tooth Fairy</NavbarBrand>
+                  <NavbarBrand src="assets/img/logo.png"href="/">Sweet Tooth Fairy</NavbarBrand>
               </div>
               </Navbar>
               <Directory/>

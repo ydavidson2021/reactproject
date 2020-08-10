@@ -13,7 +13,7 @@ class Directory extends Component {
                 },
                 {
                     id: 1,
-                    name: 'Chocolate',
+                    name: 'Chocolates',
                     image: 'assets/img/chocolate.jpg',
                     description: "Sweet Tooth Fairy recommendation: Chocollazo."
                 },
@@ -58,7 +58,14 @@ class Directory extends Component {
                     name: 'Bubble Tea',
                     image: 'assets/img/bubbletea.jpg',
                     description: "Sweet Tooth Fairy recommendation: Brew's Lee Tea"
+                },
+                {
+                    id: 9,
+                    name: 'Acai Bowl',
+                    image: 'assets/img/acaibowl.jpg',
+                    description: "Sweet Tooth Fairy recommendation: Rise Up"
                 }
+
 
             ],
         };
@@ -68,7 +75,7 @@ class Directory extends Component {
         const directory = this.state.sweets.map(sweet => {
             return (
                 <div className="col">
-                    <img src={sweet.image} alt={sweet.name} width={100} height={100} />
+                    <img src={sweet.image} alt={sweet.name} width={400} height={400} />
                     <h2>{sweet.name}</h2>
                     <p>{sweet.description}</p>
                 </div>
