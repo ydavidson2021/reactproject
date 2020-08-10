@@ -43,9 +43,9 @@ class Directory extends Component {
                 },
                 {
                     id: 6,
-                    name: 'Frozen Yogurt',
-                    image: 'assets/img/frozenyogurt.jpg',
-                    description: "Sweet Tooth Fairy recommendation: Menchie's"
+                    name: 'Paletas',
+                    image: 'assets/img/paleta.jpg',
+                    description: "Sweet Tooth Fairy recommendation: El Paraiso"
                 },
                 {
                     id: 7,
@@ -55,16 +55,30 @@ class Directory extends Component {
                 },
                 {
                     id: 8,
-                    name: 'Bubble Tea',
-                    image: 'assets/img/bubbletea.jpg',
-                    description: "Sweet Tooth Fairy recommendation: Brew's Lee Tea"
+                    name: 'Frozen Yogurt',
+                    image: 'assets/img/frozenyogurt.jpg',
+                    description: "Sweet Tooth Fairy recommendation: Menchie's"
                 },
                 {
                     id: 9,
                     name: 'Acai Bowl',
                     image: 'assets/img/acaibowl.jpg',
                     description: "Sweet Tooth Fairy recommendation: Rise Up"
+                }, 
+                {
+                    id: 10,
+                    name: 'Milk Shakes',
+                    image: 'assets/img/milkshake.jpg',
+                    description: "Sweet Tooth Fairy recommendation: Cheesy Jane's"
+                }, 
+                {
+                    id: 11,
+                    name: 'Bubble Tea',
+                    image: 'assets/img/bubbletea.jpg',
+                    description:  "Sweet Tooth Fairy recommendation: Brew's Lee"
                 }
+                
+
 
 
             ],
@@ -74,8 +88,8 @@ class Directory extends Component {
     render() {
         const directory = this.state.sweets.map(sweet => {
             return (
-                <div className="col">
-                    <img src={sweet.image} alt={sweet.name} width={400} height={400} />
+                <div key={sweet.id} className="col">
+                    <img src={sweet.image} alt={sweet.name} width={500} height={500}/>
                     <h2>{sweet.name}</h2>
                     <p>{sweet.description}</p>
                 </div>
