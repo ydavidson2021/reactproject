@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
-import SweetInfo from './SweetInfoComponent';
+import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
+
 
 // convert to presentational - no longer hold state data, no longer need constructor
 class Directory extends Component {
@@ -26,7 +26,6 @@ class Directory extends Component {
                 <div className="row">
                     {directory}
                 </div>
-
             </div>
         );
     }

@@ -22,8 +22,10 @@ class SweetInfo extends Component {
     render(){
         if(this.props.sweet){
             return (
-                <div className = "row">
-                    {this.renderSweet(this.props.sweet)}
+                <div className= "container">
+                    <div className= "row">
+                        {this.renderSweet(this.props.sweet)}
+                    </div>
                 </div>
             );
         }

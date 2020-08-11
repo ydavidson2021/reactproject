@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Directory from './DirectoryComponent';
+import SweetInfo from './SweetInfoComponent';
 import { SWEETS } from '../shared/sweets';
+
 
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state={
+    this.state = {
       sweets: SWEETS,
       selectedSweet: null
     };
@@ -20,15 +22,15 @@ class Main extends Component {
       return (
           <div>
               <Navbar dark color="info">
-              <div className="container">
-                  <NavbarBrand href="/">Sweet Tooth Fairy GPS</NavbarBrand>
-              </div>
+                <div className="container">
+                    <NavbarBrand href="/">Sweet Tooth Fairy GPS</NavbarBrand>
+                </div>
               </Navbar>
-              <Directory sweets={this.state.sweets} onClick={sweetId => this.onSweetSelect(sweet)}/>
+              <Directory sweets={this.state.sweets} onClick={sweetId => this.onSweetSelect(sweetId)}/>
               <SweetInfo sweet={this.state.sweets.filter(sweet => sweet.id === this.state.selectedSweet)[0]} />
           </div>
       );
-  }
+  };
 }
 
 export default Main;
