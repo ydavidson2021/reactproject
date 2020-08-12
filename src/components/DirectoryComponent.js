@@ -1,34 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 
+//Week3-Presentational and Container Components. Passing onClick as props
+//Week 3- Functional Components
+function RenderDirectoryItem({sweet}) {
+    return (
+        <Card>
+            <CardImg width="500px" height="500px" src={sweet.image} alt={sweet.name} />
+            <CardImgOverlay>
+                <CardTitle>{sweet.name}</CardTitle>
+            </CardImgOverlay>
+        </Card>
+    );
+}
 
-// convert to presentational - no longer hold state data, no longer need constructor
-class Directory extends Component {
-   
+function Directory(props) {
 
-    
-    render() {
-        const directory = this.props.sweets.map(sweet => {
-            return (
-                <div key={sweet.id} className="col-md-5 m-1">
-                    <Card onClick={() => this.props.onClick(sweet.id)}>
-                        <CardImg width="100%" height={500} src={sweet.image} alt={sweet.name} />
-                        <CardImgOverlay>
-                            <CardTitle>{sweet.name}</CardTitle>
-                        </CardImgOverlay>
-                    </Card>
-                </div>
-            );
-        });
-
+    const directory = props.sweets.map(sweet => {
         return (
-            <div className="container">
-                <div className="row">
-                    {directory}
-                </div>
+            <div key={sweet.id} className="col-md-5 m-1">
+                <RenderDirectoryItem sweet={sweet} />
             </div>
         );
-    }
+    });
+
+    return (
+        <div className="container">
+            <div className="row">
+                {directory}
+            </div>
+        </div>
+    );
 }
 
 export default Directory;
