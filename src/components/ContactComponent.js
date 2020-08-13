@@ -20,7 +20,7 @@ function Contact(props) {
                 </div>
                 <div className="col">
                     <a role="button" className="btn btn-link" href="tel:+12065551234"><i className="fa fa-phone" /> 1-206-555-1234</a><br />
-                    <a role="button" className="btn btn-link" href="mailto:sasweets@sweettoothgps.com"><i className="fa fa-envelope-o" /> campsites@nucamp.co</a>
+                    <a role="button" className="btn btn-link" href="mailto:sasweets@sweettoothgps.com"><i className="fa fa-envelope-o" /> sasweets@sweettoothgps.com</a>
                 </div>
             </div>
         </div>
