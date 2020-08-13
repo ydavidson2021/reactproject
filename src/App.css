@@ -22,14 +22,14 @@ h2 {
 }
 
 .site-footer {
-  background-image: linear-gradient(to right, #ffc4a3, #ffeadb );
+  background-image: url("/assets/images/logo.png");
   padding: 20px 0;
 }
 
 .jumbotron {
   margin: 0;
   padding: 30px;
-  background-image: linear-gradient(to right, #f96d80, #ff9a76, #ffc4a3 );
+  background-image: url("/assets/images/logo.png");
   color: white;
 }
 

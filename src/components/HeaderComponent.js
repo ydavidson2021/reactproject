@@ -25,9 +25,6 @@ class Header extends Component {
                 <Jumbotron fluid>
                     <div className="container">
                         <div className="row">
-                            <div className="col-2">
-                                <img src="/assets/img/logo.png" height="100" width="100" alt="Sweet Tooth Fairy GPS Logo" />     
-                            </div>
                             <div className="col">
                                 <h1>Sweet Tooth Fairy GPS</h1>                           
                                 <h3>Locating sweet spots in Downtown San Antonio</h3>
@@ -37,7 +34,7 @@ class Header extends Component {
                 </Jumbotron>
                 <Navbar dark sticky="top" expand="md">
                     <div className="container">
-                        <NavbarBrand className="mr-auto" href="/"><img src="/assets/img/logo.png" height="30" width="30" alt="Sweet Tooth Fairy GPS Logo" /></NavbarBrand>
+                        <NavbarBrand className="mr-auto" href="/"><img src="/assets/images/logo.png" height="100" width="100" alt="Sweet Tooth Fairy GPS Logo" /></NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>

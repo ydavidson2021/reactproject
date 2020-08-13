@@ -1,36 +1,41 @@
-import React, { Component } from 'react'; 
-import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
+import React from 'react'; 
+import { Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
-class SweetInfo extends Component {
-    constructor(props){
-        super(props);
-    }
+function RenderSweet({sweet}){
+    return(
+        <div className="col-md-5 m-1">
+            <Card>
+                <CardImg top src={sweet.image} alt={sweet.name} />
+                <CardBody>
+                    <CardText>{sweet.description}</CardText>
+                </CardBody>
+            </Card>
+        </div>
+    );
+}
 
-    renderSweet(sweet){
-        return(
-            <div className="col-md-5 m-1">
-                <Card>
-                    <CardImg top src={sweet.image} alt={sweet.name} />
-                    <CardBody>
-                        <CardTitle>{sweet.name}</CardTitle>
-                        <CardText>{sweet.description}</CardText>
-                    </CardBody>
-                </Card>
+function SweetInfo(props){
+    if(props.sweet){
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <Breadcrumb>
+                            <BreadcrumbItem><Link to="/directory">Directory</Link></BreadcrumbItem>
+                            <BreadcrumbItem active>{props.sweet.name}</BreadcrumbItem>
+                        </Breadcrumb>
+                        <h2>{props.sweet.name}</h2>
+                        <hr />
+                    </div>
+                </div>
+                <div className = "row">
+                    <RenderSweet sweet={props.sweet} />
+                </div>
             </div>
         );
     }
-    render(){
-        if(this.props.sweet){
-            return (
-                <div className= "container">
-                    <div className= "row">
-                        {this.renderSweet(this.props.sweet)}
-                    </div>
-                </div>
-            );
-        }
-        return <div/>;
-    }
+    return <div/>;
 }
 
 export default SweetInfo; 
