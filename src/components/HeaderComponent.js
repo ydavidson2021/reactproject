@@ -22,16 +22,6 @@ class Header extends Component {
     render(){
         return(
             <React.Fragment>
-                <Jumbotron fluid>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col">
-                                <h1>Sweet Tooth Fairy GPS</h1>                           
-                                <h3>Locating sweet spots in Downtown San Antonio</h3>
-                            </div>
-                        </div>
-                    </div>
-                </Jumbotron>
                 <Navbar dark sticky="top" expand="md">
                     <div className="container">
                         <NavbarBrand className="mr-auto" href="/"><img src="/assets/images/logo.png" height="100" width="100" alt="Sweet Tooth Fairy GPS Logo" /></NavbarBrand>

@@ -6,7 +6,7 @@ function RenderSweet({sweet}){
     return(
         <div className="col-md-5 m-1">
             <Card>
-                <CardImg top src={sweet.image} alt={sweet.name} />
+                <CardImg top src={`/${sweet.image}`} width="300px" height="300px" alt={sweet.name} />
                 <CardBody>
                     <CardText>{sweet.description}</CardText>
                 </CardBody>

@@ -3,9 +3,14 @@ body {
 }
 
 h1, h2, h3, .card-body>h5 {
-  font-family: "Lobster", cursive; 
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Caveat', cursive;
+  text-align: center;
 }
 
+p {
+  text-align: center;
+}
 h2 {
   color: #3046C5;
 }
@@ -34,5 +39,6 @@ h2 {
 }
 
 .navbar-dark {
-  background-color: #f96d80;
+  background-image: url("/assets/images/logo.png");
+  color: teal;
 }
