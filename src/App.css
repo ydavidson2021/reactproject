@@ -2,12 +2,15 @@ body {
   font-family: "Open Sans", sans-serif; 
 }
 
-h1, h2, h3, .card-body>h5 {
+h1, h2, h3, h5, .card-body>h5 {
   font-family: 'Amatic SC', cursive;
   font-family: 'Caveat', cursive;
   text-align: center;
 }
 
+h6 {
+
+}
 p {
   text-align: center;
 }
@@ -40,5 +43,9 @@ h2 {
 
 .navbar-dark {
   background-image: url("/assets/images/logo.png");
-  color: teal;
 }
+
+.navcolor {
+  color: black;
+}
+

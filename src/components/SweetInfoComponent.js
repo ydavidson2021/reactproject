@@ -8,7 +8,8 @@ function RenderSweet({sweet}){
             <Card>
                 <CardImg top src={`/${sweet.image}`} width="300px" height="300px" alt={sweet.name} />
                 <CardBody>
-                    <CardText>{sweet.description}</CardText>
+                    <CardText>{sweet.description} </CardText>
+                    <a target="_blank" href={sweet.url}> {sweet.store} </a>
                 </CardBody>
             </Card>
         </div>

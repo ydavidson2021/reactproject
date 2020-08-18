@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody } from 'reactstrap';
 import Image from 'react-bootstrap/Image';
+import { Link } from 'react-router-dom';
 
 function RenderCard({item}) {
     return (
@@ -21,7 +22,7 @@ function Home(props) {
                 <div className="col-md m-1">
                     <h1 align-self="center"> Sweet Cravings?</h1>
                     <h2>Looking for sweet spots in Downtown San Antonio?</h2>
-                    <Image src="./assets/images/candy.jpg" fluid width="400" height="400" className="rounded mx-auto d-block"/>
+                    <Image className="candy" src="./assets/images/candy.jpg" fluid width="400" height="400" className="rounded mx-auto d-block"/>
                 </div>
             </div>
             <div className="row">
@@ -31,25 +32,20 @@ function Home(props) {
                 </div>
             </div>
             <div className="row">
-            <div className="col-lg-4">
-            <Image src="./assets/images/macaron.jpg" width="300"  height="300" roundedCircle className="mx-auto d-block" />
-            <h3 className="feature-title">Macarons</h3>
+                <div className="col-lg-4">
+                    <Image src="./assets/images/macaron.jpg" width="350"  height="350" roundedCircle className="mx-auto d-block" />                   
+                    <Link to="/directory/0"> <h3 className="feature-title">Macarons</h3></Link>
+
+                </div>
+                <div className="col-lg-4">
+                    <Image src="./assets/images/churros.jpg" width="350"  height="350" roundedCircle className="mx-auto d-block" />
+                    <Link to="/directory/2"> <h3 className="feature-title">Churros</h3></Link>
+                </div>
+                <div className="col-lg-4">
+                    <Image src="./assets/images/paleta.jpg" width="350"  height="350" roundedCircle className="mx-auto d-block" />
+                    <Link to="/directory/6"> <h3 className="feature-title">Paletas</h3></Link>
+                </div>
             </div>
-
-            <div className="col-lg-4">
-            <Image src="./assets/images/churros.jpg" width="300"  height="300" roundedCircle className="mx-auto d-block" />
-            <h3 className="feature-title">Churros</h3>
-            </div>
-
-            <div className="col-lg-4">
-            <Image src="./assets/images/paleta.jpg" width="300"  height="300" roundedCircle className="mx-auto d-block" />
-            <h3 className="feature-title">Paletas</h3>
-
-            </div>
-    </div>
-
-
-
         </div>
     );
 }

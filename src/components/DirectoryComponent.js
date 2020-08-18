@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import Image from 'react-bootstrap/Image';
 
 //Week3-Presentational and Container Components. Passing onClick as props
 //Week 3- Functional Components
@@ -8,7 +9,7 @@ function RenderDirectoryItem({sweet}) {
     return (
         <Card>
             <Link to={`/directory/${sweet.id}`}>
-                <CardImg width="300px" height="300px" src={sweet.image} alt={sweet.name} />
+                <CardImg width="400" height="400" src={sweet.image} alt={sweet.name} />
                 <CardImgOverlay>
                     <CardTitle>{sweet.name}</CardTitle>
                 </CardImgOverlay>
