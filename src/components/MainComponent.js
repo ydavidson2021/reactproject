@@ -1,34 +1,32 @@
 import React, { Component } from 'react';
-import Directory from './DirectoryComponent';
+import Confectionery from './ConfectioneryComponent';
 import SweetInfo from './SweetInfoComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
 import Contact from './ContactComponent';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import { SWEETS } from '../shared/sweets';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
+
+const mapStateToProps = state => {
+  return {
+      sweets: state.sweets,
+  };
+};
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      sweets: SWEETS
-    };
-  }
   render() {
     const HomePage = () => {
       return(
-          <Home 
-            sweet={this.state.sweets.filter(sweet => sweet.featured)[0]}
+          <Home       
           />
       );
     }
-
-    const SweetWithId = ({match}) => {
+    const SweetWithName= ({match}) => {
       return (
           <SweetInfo 
-              sweet={this.state.sweets.filter(sweet => sweet.id === +match.params.sweetId)[0]}
+            sweet={this.state.sweets.filter(sweet => sweet.name === +match.params.sweetName)[0]}
           />
       );
   };
@@ -37,8 +35,8 @@ class Main extends Component {
           <Header/>
           <Switch>
               <Route path='/home' component={HomePage} />
-              <Route exact path='/directory' render={() => <Directory sweets={this.state.sweets} />} />
-              <Route path='/directory/:sweetId' component={SweetWithId} />
+              <Route exact path='/confectionery' render={() => <Confectionery sweets={this.state.sweets} />} />
+              <Route path='/confectionery/:sweetName' component={SweetWithName} />
               <Route exact path='/contactus' component={Contact} />     
               <Redirect to='/home' />
           </Switch>
@@ -48,4 +46,4 @@ class Main extends Component {
   };
 }
 
-export default Main;
+export default withRouter (connect(mapStateToProps)(Main));

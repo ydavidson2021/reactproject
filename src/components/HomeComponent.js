@@ -34,16 +34,16 @@ function Home(props) {
             <div className="row">
                 <div className="col-lg-4">
                     <Image src="./assets/images/macaron.jpg" width="350"  height="350" roundedCircle className="mx-auto d-block" />                   
-                    <Link to="/directory/0"> <h3 className="feature-title">Macarons</h3></Link>
+                    <Link to="/confectionery/macaron"> <h3 className="feature-title">Macarons</h3></Link>
 
                 </div>
                 <div className="col-lg-4">
                     <Image src="./assets/images/churros.jpg" width="350"  height="350" roundedCircle className="mx-auto d-block" />
-                    <Link to="/directory/2"> <h3 className="feature-title">Churros</h3></Link>
+                    <Link to="/confectionery/churros"> <h3 className="feature-title">Churros</h3></Link>
                 </div>
                 <div className="col-lg-4">
                     <Image src="./assets/images/paleta.jpg" width="350"  height="350" roundedCircle className="mx-auto d-block" />
-                    <Link to="/directory/6"> <h3 className="feature-title">Paletas</h3></Link>
+                    <Link to="/confectionery/paleta"> <h3 className="feature-title">Paletas</h3></Link>
                 </div>
             </div>
         </div>

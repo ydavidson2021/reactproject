@@ -1,14 +1,15 @@
 import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import Image from 'react-bootstrap/Image';
+
 
 //Week3-Presentational and Container Components. Passing onClick as props
 //Week 3- Functional Components
-function RenderDirectoryItem({sweet}) {
+
+function RenderConfectioneryItem({sweet}) {
     return (
         <Card>
-            <Link to={`/directory/${sweet.id}`}>
+            <Link to={`/confectionery/${sweet.name}`}>
                 <CardImg width="400" height="400" src={sweet.image} alt={sweet.name} />
                 <CardImgOverlay>
                     <CardTitle>{sweet.name}</CardTitle>
@@ -18,12 +19,12 @@ function RenderDirectoryItem({sweet}) {
     );
 }
 
-function Directory(props) {
+function Confectionery(props) {
 
-    const directory = props.sweets.map(sweet => {
+    const confectionery = props.sweets.map(sweet => {
         return (
-            <div key={sweet.id} className="col-md-5 m-1">
-                <RenderDirectoryItem sweet={sweet} />
+            <div key={`/sweet.id`} className="col-md-5 m-1">
+                <RenderConfectioneryItem sweet={sweet} />
             </div>
         );
     });
@@ -34,17 +35,17 @@ function Directory(props) {
                 <div className="col">
                     <Breadcrumb>
                         <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
-                        <BreadcrumbItem active>Directory</BreadcrumbItem>
+                        <BreadcrumbItem active>Confectionery</BreadcrumbItem>
                     </Breadcrumb>
-                    <h2>Directory</h2>
+                    <h2>Confectionery</h2>
                     <hr />
                 </div>
             </div>
             <div className="row">
-                {directory}
+                {confectionery}
             </div>
         </div>
     );
 }
 
-export default Directory;
+export default Confectionery;
