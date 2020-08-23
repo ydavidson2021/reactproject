@@ -76,7 +76,7 @@ function Home(props) {
                     <center>
                         <i className="fa fa-map-marker fa-4x" />
                     </center>
-                    <h3>Support Local Businesses</h3>
+                    <h3>Support Local Business</h3>
                     <p>Most shops featured are local businesses in downtown San Antonio.</p>
                 </div>
                 <div className="col">
