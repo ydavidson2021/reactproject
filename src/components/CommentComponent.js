@@ -93,7 +93,7 @@ class Comment extends Component {
                                     />
                                 </Col>
                                 <Col>
-                                    <Button type="submit" color="warning">
+                                    <Button type="submit" color="warning" size="lg">
                                         Send
                                     </Button>
                                 </Col>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardGroup, CardText, CardBody} from 'reactstrap';
+import { Card, CardGroup, CardText, CardBody, Button} from 'reactstrap';
 import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router-dom';
 import { UncontrolledCarousel } from 'reactstrap';
@@ -97,9 +97,7 @@ function Home(props) {
             <div className="row">
                 <div className="col-md m-1">
                     <h1> Featured Treats</h1>
-                    <NavLink className="nav-link" to="/confectionery">
-                        <h2 className="text-info">Click HERE for more selections</h2> 
-                    </NavLink>
+                    <Button color="info" tag={Link}to="/confectionery" size="lg"> Sweet Listings </Button>{' '}
                 </div>
             </div>
             <div className="row">
