@@ -14,7 +14,7 @@ function Contact(props) {
                 <div className="col-sm-4">
                     <h5>Our Address</h5>
                     <address>
-                        San Antonio, TX 78209<br />
+                        San Antonio, TX<br />
                         U.S.A.
                     </address>
                 </div>

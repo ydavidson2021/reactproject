@@ -1,21 +1,26 @@
 body {
   font-family: "Open Sans", sans-serif; 
+  text-align: center; 
 }
 
-h1, h2, h3, h5, .card-body>h5 {
-  font-family: 'Amatic SC', cursive;
-  font-family: 'Caveat', cursive;
-  text-align: center;
+h1 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+h2, h3, h5, .card-body>h5 {
+  font-family: 'Signika Negative', sans-serif;
+}
+
+h4 {
+  color: #ff7171; 
 }
 
 h6 {
 
 }
-p {
-  text-align: center;
-}
+
 h2 {
-  color: #3046C5;
+  color: purple;
 }
 
 .card-img-overlay h5 {
@@ -41,7 +46,7 @@ h2 {
   color: white;
 }
 
-.navbar-dark {
+.navbar {
   background-image: url("/assets/images/logo.png");
 }
 
@@ -49,3 +54,23 @@ h2 {
   color: black;
 }
 
+.carousel-item > img { 
+  width: 500px;
+  height: 500px; 
+  border-radius: 50%; 
+  margin: auto; 
+}
+
+.features {
+  background-color: yellow;
+  padding: 4.5%; 
+}
+
+.navItem {
+  color: purple;
+}
+
+.comment {
+  background-color: #ff7171;
+  padding: 4.5%; 
+}
