@@ -11,24 +11,23 @@ const items = [
     {
     src:"./assets/images/macaron.jpg",                   
     altText: 'Macarons',
-    caption: 'Macarons',
+    caption: <Link to='/confectionery/0' className="white-text" >Macarons</Link>,
     header: 'Macarons',
-    //href: "/confectionery/macarons",
-    key: '1'
+    key: '0'
     },
     {
     src: './assets/images/churros.jpg',
     altText: 'Churros',
-    caption: 'Churros',
+    caption: <Link to='/confectionery/1' className="white-text" >Churros</Link>,
     header: 'Churros',
-    key: '2'
+    key: '1'
     },
     {
     src: './assets/images/paleta.jpg',   
-    altText: 'Paletas',
-    caption: 'Paletas',
+    altText: 'Churros',
+    caption: <Link to='/confectionery/2' className="white-text"> Paletas</Link>,
     header: 'Paletas',
-    key: '3'
+    key: '2'
     }
   ];
   
@@ -88,7 +87,8 @@ function Home(props) {
                     <Button color="info" tag={Link}to="/confectionery" size="lg"> Sweet Listings </Button>{' '}
                 </div>
             </div>
-            <div className="row">
+            <br></br>
+            <div className="row center-carousel">
                 <UncontrolledCarousel items={items} />               
             </div>
             <br></br>

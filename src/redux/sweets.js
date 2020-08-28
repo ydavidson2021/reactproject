@@ -1,17 +1,7 @@
-import * as ActionTypes from './ActionTypes';
+import { SWEETS } from '../shared/sweets';
 
-export const Sweets = (state = {
-        isLoading: true,
-        errMess: null,
-        sweets: []
-    }, action) => {
+export const Sweets = (state = SWEETS, action) => {
     switch (action.type) {
-        case ActionTypes.ADD_SWEETS:
-            return {...state, isLoading: false, errMess: null, sweets: action.payload};
-        case ActionTypes.SWEETS_LOADING:
-            return {...state, isLoading: true, errMess: null, sweets: []};
-        case ActionTypes.SWEETS_FAILED:
-            return {...state, isLoading: false, errMess: action.payload};
         default:
             return state;
     }

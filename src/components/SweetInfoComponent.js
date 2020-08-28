@@ -27,8 +27,10 @@ class CommentForm extends Component {
     }
 
     handleSubmit(values) {
-        console.log('Current state is: ' + JSON.stringify(values));
-        alert('Current state is: ' + JSON.stringify(values));
+        this.toggleModal();
+        this.props.addComment(this.props.sweetId, values.rating, values.text);
+        //console.log('Current state is: ' + JSON.stringify(values));
+        //alert('Current state is: ' + JSON.stringify(values));
     }
     
     render() {
@@ -82,7 +84,7 @@ class CommentForm extends Component {
                             </div>
                             <div className="form-group">
                                 <Button type="submit" color="primary">
-                                        Submit
+                                    Submit
                                 </Button>
                             </div>                     
                         </LocalForm>
@@ -97,7 +99,7 @@ function RenderSweet({sweet}){
     return(
         <div className="col-md-5 m-1">
             <Card>
-                <CardImg top src={sweet.image} width="300px" height="300px" alt={sweet.name} />
+                <CardImg top src={`/${sweet.image}`} width="300px" height="300px" alt={sweet.name} />
                 <CardBody>
                     <CardText>{sweet.description} </CardText>
                     <a target="_blank" href={sweet.url}> {sweet.store}</a>
@@ -107,7 +109,7 @@ function RenderSweet({sweet}){
     );
 }
 
-function RenderComments({comments}){
+function RenderComments({comments, addComment, sweetId}){
     if(comments)
         return(
             <div className="col-md-5 m-1">
@@ -120,7 +122,7 @@ function RenderComments({comments}){
                         {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}
                         </p></div>)
                 })}
-            <CommentForm/>
+            <CommentForm sweetId={sweetId} addComment={addComment} />
         </div>
     );
 }
@@ -142,7 +144,11 @@ function SweetInfo(props){
                 </div>
                 <div className = "row">
                     <RenderSweet sweet={props.sweet} />
-                    <RenderSweet sweet={props.sweet} />
+                    <RenderComments 
+                        comments={props.comments}
+                        addComment={props.addComment}
+                        campsiteId={props.sweet.id}
+                    />
                 </div>
             </div>
         );

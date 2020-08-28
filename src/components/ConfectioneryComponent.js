@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function RenderConfectioneryItem({sweet}) {
     return (
         <Card>
-            <Link to={`/confectionery/${sweet.name}`}>
+            <Link to={`/confectionery/${sweet.id}`}>
                 <CardImg width="400" height="400" src={sweet.image} alt={sweet.name} />
                 <CardImgOverlay>
                     <CardTitle>{sweet.name}</CardTitle>

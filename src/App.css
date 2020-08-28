@@ -94,3 +94,12 @@ h2 {
   transform: translateX(0%);
   transition: 300ms ease-out;
 }
+
+.center-carousel {
+  display: flex; 
+  justify-content: center;
+}
+
+.white-text {
+  color: white;
+}
