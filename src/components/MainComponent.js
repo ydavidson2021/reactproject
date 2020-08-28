@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Confectionery from './ConfectioneryComponent';
-import Directory from './DirectoryComponent';
 import SweetInfo from './SweetInfoComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
@@ -10,9 +9,10 @@ import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 
+
 const mapStateToProps = state => {
   return {
-      sweets: state.sweets,
+      sweets: state.sweets
   };
 };
 
@@ -35,10 +35,11 @@ class Main extends Component {
     const SweetWithId= ({match}) => {
       return (
           <SweetInfo 
-            sweet={this.state.sweets.filter(sweet => sweet.id === +match.params.sweetId)[0]}
+            sweet={this.props.sweets.filter(sweet => sweet.id === +match.params.sweetId)[0]}
           />
       );
     };
+
     return (
       <div>
           <Header/>
@@ -46,7 +47,7 @@ class Main extends Component {
               <Route path='/home' component={HomePage} />
               {/*<Route exact path='/confectionery' render={() => <Confectionery sweets={this.state.sweets} />} /> */}
               {/*<Route path='/confectionery/:sweetName' component={SweetWithName} /> */}
-              <Route exact path='/directory' render={() => <Directory sweets={this.state.sweets} />} />
+              <Route exact path='/confectionery' render={() => <Confectionery sweets={this.props.sweets} />} />
               <Route path='/confectionery/:sweetId' component={SweetWithId} />
               <Route exact path='/contactus' component={Contact} />     
               <Redirect to='/home' />

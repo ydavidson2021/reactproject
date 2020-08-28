@@ -23,7 +23,7 @@ function Confectionery(props) {
 
     const confectionery = props.sweets.map(sweet => {
         return (
-            <div key={`/sweet.id`} className="col-md-5 m-1">
+            <div key={sweet.id} className="col-md-5 m-1">
                 <RenderConfectioneryItem sweet={sweet} />
             </div>
         );

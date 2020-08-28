@@ -1,18 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Card, CardGroup, CardText, CardBody, Button} from 'reactstrap';
 import Image from 'react-bootstrap/Image';
 import { Link } from 'react-router-dom';
 import { UncontrolledCarousel } from 'reactstrap';
 import Comment from './CommentComponent';
-import { NavLink } from 'react-router-dom';
-
-
-// validation
-const required = val => val && val.length;
-const maxLength = len => val => !val || (val.length <= len);
-const minLength = len => val => val && (val.length >= len);
-const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
-
 
 
 
@@ -41,9 +32,6 @@ const items = [
     }
   ];
   
-const Example = () => <UncontrolledCarousel items={items} />;
-// Is there use props? 
-// center the carousel? 
 
 function RenderCard({item}) {
     return (
@@ -122,4 +110,4 @@ function Home(props) {
     );
 }
 
-export default Home;  
+export default Home; 
